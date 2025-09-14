@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 🔝 Хедер -->
+  <header>
+    <div class="logo">
+      <a href="main.html">🌱 GreenSeeds</a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="catalog.html">Магазин</a>
+      <a href="spores.html">Споры грибов</a>
+      <a href="chat.html">Чат</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="cart">
+      <a href="cart.html">🛒<span class="cart-count">0</span></a>
+    </div>
+
+    <div class="burger">
+      ☰
+    </div>
+  </header>
+
+  <main>
+    <div class="filter-container">
+        <select id="categoryFilter">
+          <option value="all">Все категории</option>
+          <option value="autoflowers">Автоцветы</option>
+          <option value="feminized" selected>Феминизированные</option>
+          <option value="regulars">Регуляры</option>
+          <option value="mushroom">Споры грибов</option>
+        </select>
+    </div>
+
+    <div id="catalog" class="catalog"></div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; 2025 Cannabis & Mushroom Store. All rights reserved.</p>
+    <p class="footer-text">Contact: support@cannabisstore.com</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="catalog.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

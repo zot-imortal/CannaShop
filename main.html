@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин семян и спор</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- 🔝 Хедер -->
+<!-- 🔝 Хедер -->
+  <header>
+    <div class="logo">
+        <img src="img\icon.png" alt="Site Icon" class="header-icon"> <!-- Иконка в хедере -->
+  
+      <a href="main.html"> </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="catalog.html">Магазин</a>
+      <a href="spores.html">Споры грибов</a>
+      <a href="chat.html">Чат</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="aboutUs.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="cart">
+      <a href="cart.html">🛒<span class="cart-count">0</span></a>
+    </div>
+
+    <div class="burger">
+      ☰
+    </div>
+  </header>
+
+
+  <!-- 🏞️ Баннер (приветствие) -->
+   <section class="hero">
+    <div class="hero-content">
+      <h1 class="animate-fade">Добро пожаловать в <span>Strong and power full genetics</span></h1>
+      <p class="animate-slide">Качество — наш главный приоритет. Наши семена каннабиса выведены экспертами с многолетним опытом. Мы гарантируем их максимальную урожайность.</p>
+      <a href="catalog.html" class="btn animate-fade">Перейти в магазин</a>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <section id="catalog" class="catalog">
+
+       <h2>Наш каталог</h2>
+
+      <!-- Фильтр -->
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="all">Все категории</option>
+          <option value="autoflowers">Автоцветы</option>
+          <option value="feminized" selected>Феминизированные</option>
+          <option value="regulars">Регуляры</option>
+          <option value="mushroom">Споры грибов</option>
+        </select>
+
+        <select id="priceFilter">
+          <option value="all">Все цены</option>
+          <option value="low">До 2000 ₽</option>
+          <option value="mid">2000 ₽ – 4000 ₽</option>
+          <option value="high">От 4000 ₽</option>
+        </select>
+      </div>
+
+      <!-- Здесь будут карточки товаров -->
+      <div id="product-list" class="product-list"></div>
+    </section>
+
+  <!-- ℹ️ О нас -->
+ <section class="about">
+  <h2 class="about-title">Why you need<br>choice us ?</h2>
+  
+  <div class="about-container">
+    <div class="about-text">
+      <h3>About Genetic</h3>
+      <p><strong>Why Choose Our Feminized Seeds?</strong> seeds collection is a stunning selection of some of the world's best and most sought-after female cannabis strains. Unleash the full potential of your cannabis garden with the unparalleled benefits of feminised seeds. Pioneers of feminized seeds, we boast the title of being the world's premier supplier of feminized cannabis seeds.</p>
+      <p>As a cultivator, embracing feminized marijuana seeds opens a realm of immeasurable benefits, such as amplified yields, potent trichome composition with elevated THC and CBD concentrations, aromatic and flavor-rich bouquets, punctual floral cycles, and optimized cultivation efforts and spatial utilization through the elimination of male cannabis plants.</p>
+      
+      <button class="about-btn">GET IT NOW!</button>
+    </div>
+    
+    <div class="about-image">
+      <img src="img\photo_2025-08-19_14-55-10.jpg" alt="Cannabis field">
+    </div>
+  </div>
+</section>
+
+  <!-- 💬 Чат -->
+  <!-- ===== CONTACTS SECTION ===== -->
+ 
+
+  <!-- 🔚 Футер -->
+ <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h2>OG genetic</h2>
+      <p>Quality genetics for your success 🌱</p>
+        
+      <section class="contacts">
+    <h1>📩 Наши контакты</h1>
+    <div class="contact-info">
+      <p>✉️ Email: <a href="mailto:support@seedspore.com">support@seedspore.com</a></p>
+      <p>💬 Telegram: <a href="https://t.me/seedspore" target="_blank">@seedspore</a></p>
+    </div>
+  </section>
+    </div>
+
+    <div class="footer-center">
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="aboutUs.html">About</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 OG genetic. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

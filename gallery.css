@@ -1,0 +1,372 @@
+/* Стили для хедера */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-icon {
+  width: 40px;
+  height: auto;
+  transition: width 0.3s ease;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+}
+.nav-links a.active {
+  font-weight: bold;
+  color: #27ae60;
+}
+.cart, .burger {
+  font-size: 1.5em;
+}
+@media (max-width: 768px) {
+  .header-icon {
+    width: 30px;
+  }
+  .nav-links {
+    display: none; /* Скрываем меню на планшетах, можно добавить бургер-меню */
+  }
+  .burger {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  .header-icon {
+    width: 25px;
+  }
+  .logo a {
+    font-size: 1em;
+  }
+}
+
+/* Стили для баннера */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+.banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.banner-btn {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.banner-btn:hover {
+  background-color: #c0392b;
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: brightness(0.9);
+  transition: opacity 0.5s ease;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+  .banner h1 {
+    font-size: 2em;
+  }
+  .banner p {
+    font-size: 1em;
+  }
+}
+@media (max-width: 480px) {
+  .banner {
+    height: 200px;
+  }
+  .banner h1 {
+    font-size: 1.5em;
+  }
+  .banner p {
+    font-size: 0.9em;
+  }
+  .banner-btn {
+    padding: 8px 15px;
+  }
+}
+
+/* Стили для фильтров */
+.filters {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+.filter-select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Стили для каталога */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+.card-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Стили для акций */
+.promotions {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.promo-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.promo-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+.promo-card:hover {
+  transform: translateY(-5px);
+}
+.promo-image {
+  max-width: 100%;
+  height: auto;
+}
+.promo-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.promo-price {
+  color: #e74c3c;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.promo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Стили для оплаты */
+.payment-section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+#payment-form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#card-element {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#submit-payment {
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#submit-payment:hover {
+  background-color: #219653;
+}
+#payment-response {
+  margin-top: 10px;
+  color: #e74c3c;
+}
+
+/* Стили для галереи */
+.gallery-section {
+  margin: 40px 0;
+  padding: 20px;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+.gallery-overlay p {
+  margin: 0;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+.modal-image {
+  max-width: 90%;
+  max-height: 80vh;
+  margin: auto;
+  display: block;
+  animation: zoomIn 0.5s ease-in-out;
+}
+.modal-caption {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.close-modal:hover {
+  color: #e74c3c;
+}
+
+/* Общие анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Медиа-запросы для адаптации */
+@media (max-width: 768px) {
+  .banner, .gallery-section, .promotions, .payment-section {
+    padding: 15px;
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .card, .promo-card {
+    width: 200px;
+  }
+  #payment-form {
+    max-width: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .banner h1 {
+    font-size: 1.2em;
+  }
+  .banner p {
+    font-size: 0.8em;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .card, .promo-card {
+    width: 150px;
+  }
+  #submit-payment {
+    padding: 8px;
+  }
+  .nav-links {
+    display: none; /* Убедись, что бургер-меню реализовано отдельно */
+  }
+}

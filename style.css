@@ -1,0 +1,585 @@
+/* =================== БАЗОВЫЕ СТИЛИ =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+body {
+  background: #f4fff6;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =================== ШАПКА =================== */
+/* ===== HEADER ===== */
+header {
+    background-color: #212121;
+    color: white;
+    padding: 0px 30px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+  background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Inknut Antiqua", serif;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+    
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #9be58c;
+}
+
+/* Иконки справа */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.header-icons i:hover {
+    transform: scale(1.2);
+    color: #9be58c;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Скрываем меню */
+        flex-direction: column;
+        width: 100%;
+        background: #163d30;
+        padding: 10px 0;
+    }
+
+    nav.active {
+        display: flex; /* Показываем при клике */
+    }
+
+    .burger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 769px) {
+    .burger {
+        display: none;
+    }
+}
+
+/* =================== БАННЕР =================== */
+.hero {
+  background: url('img\main.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.hero button {
+  margin-top: 20px;
+  background: #34c759;
+  border: none;
+  padding: 12px 28px;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero button:hover {
+  background: #2aa94f;
+  transform: scale(1.05);
+}
+
+.catalog {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+  justify-content: center; /* центрируем карточки */
+  gap: 20px;
+}
+
+.product-card {
+  max-width: 300px; /* ограничиваем максимальную ширину */
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px; /* фиксируем высоту */
+  object-fit: cover; /* обрезаем картинку пропорционально */
+  border-radius: 10px;
+}
+
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+  margin: 10px 0;
+}
+
+.buy-btn {
+  background: linear-gradient(90deg, #2ecc71, #27ae60);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-btn:hover {
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+}
+
+/* =================== ЧАТ =================== */
+.chat-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 40px 0;
+}
+
+.chat-messages {
+  height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.chat-input button {
+  background: #34c759;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #2aa94f;
+}
+
+/* =================== ФУТЕР =================== */
+.site-footer {
+  background: #8bc34a;
+  color: #e6f4e8;
+  padding: 30px 20px 15px;
+  font-family: 'Inknut Antiqua', serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 6px 0;
+}
+
+.footer-center ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-right a {
+  margin: 0 6px;
+  color: #f1f1f1;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+}
+
+
+/* =================== АНИМАЦИИ =================== */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* =================== АДАПТИВНОСТЬ =================== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .products {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* =================== СЕКЦИЯ "О НАС" =================== */
+.about {
+  padding: 60px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #7dbf3b;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-btn {
+  background: #66bb6a;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #4caf50;
+  transform: scale(1.05);
+}
+
+.about-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .about-btn {
+    margin-top: 15px;
+  }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('img/main.jpg'); */
+  background-color: #222;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+  color: #68d391;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #052f2b;
+  background: #68d391;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(104, 211, 145, 0.4);
+}
+
+.btn:hover {
+  background: #4ade80;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(104, 211, 145, 0.6);
+}
+
+/* АНИМАЦИИ */
+.animate-fade {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.animate-slide {
+  animation: slideUp 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #052f2b;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* АДАПТИВ */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  header .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 10%;
+    background: #052f2b;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  header .nav-links.nav-active {
+    display: flex;
+  }
+
+  header .burger {
+    display: block;
+  }
+}

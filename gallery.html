@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея - GreenSeeds</title>
+  <link rel="stylesheet" href="gallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png"> <!-- Замени на свое изображение -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Для старых браузеров -->
+</head>
+<body>
+  <!-- 🔝 Хедер -->
+  <header>
+    <div class="logo">
+      <img src="icon.png" alt="Site Icon" class="header-icon"> <!-- Иконка в хедере -->
+      <a href="index.html">🌱 GreenSeeds</a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Магазин</a>
+      <a href="spores.html">Споры грибов</a>
+      <a href="chat.html">Чат</a>
+      <a href="gallery.html" class="active">Галерея</a>
+      <a href="about.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="cart">
+      <a href="cart.html">🛒<span class="cart-count">0</span></a>
+    </div>
+
+    <div class="burger">
+      ☰
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-section">
+      <h2>Наша галерея</h2>
+      <p>Погрузитесь в мир наших семян и споров с потрясающими фото!</p>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=1" alt="Gallery Image 1" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Семена автоцветов</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=2" alt="Gallery Image 2" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Феминизированные семена</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=3" alt="Gallery Image 3" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Регулярные семена</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=4" alt="Gallery Image 4" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Споры грибов</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=5" alt="Gallery Image 5" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Ростки растений</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/400/300?random=6" alt="Gallery Image 6" class="gallery-image">
+          <div class="gallery-overlay">
+            <p>Урожай</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальное окно для увеличенного изображения -->
+    <div id="modal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-image" alt="Enlarged Image">
+      <p class="modal-caption"></p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; 2025 Cannabis & Mushroom Store. All rights reserved.</p>
+    <p class="footer-text">Contact: support@cannabisstore.com</p>
+  </footer>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

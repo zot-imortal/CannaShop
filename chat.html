@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Чат/Форум с Disqus</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+<!-- 🔝 Хедер -->
+    <header>
+        <div class="logo">
+            <a href="main.html">🌱 GreenSeeds</a>
+        </div>
+        <nav class="nav-links">
+            <a href="main.html">Главная</a>
+            <a href="catalog.html">Магазин</a>
+            <a href="spores.html">Споры грибов</a>
+            <a href="chat.html">Чат</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="aboutUs.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html">🛒<span class="cart-count">0</span></a>
+        </div>
+        <div class="burger">
+            ☰
+        </div>
+    </header>
+
+  <h1>Форум / Чат</h1>
+  <p>Здесь посетители могут оставлять свои сообщения и обсуждать в режиме форума.</p>
+
+  <!-- Disqus контейнер -->
+  <div id="disqus_thread"></div>
+
+  <script>
+      var disqus_config = function () {
+          this.page.url = window.location.href;  // Уникальный URL страницы
+          this.page.identifier = window.location.pathname; // Уникальный идентификатор страницы
+      };
+
+      (function() { // НЕ ТРОГАЙ, ЭТО СТАНДАРТНЫЙ КОД
+          var d = document, s = d.createElement('script');
+          s.src = 'https://spb-4.disqus.com/embed.js';  
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+
+  <noscript>
+    Пожалуйста, включите JavaScript, чтобы увидеть 
+    <a href="https://disqus.com/?ref_noscript">комментарии powered by Disqus.</a>
+  </noscript>
+<script src="main.js"></script>
+</body>
+</html>

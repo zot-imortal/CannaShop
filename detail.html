@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="detail.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 🔝 Хедер -->
+  <header>
+    <div class="logo">
+      <a href="main.html">🌱 GreenSeeds</a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="main.html">Главная</a>
+      <a href="catalog.html">Магазин</a>
+      <a href="spores.html">Споры грибов</a>
+      <a href="chat.html">Чат</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="aboutUs.html">О нас</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+
+    <div class="cart">
+      <a href="cart.html">🛒<span class="cart-count">0</span></a>
+    </div>
+
+    <div class="burger">
+      ☰
+    </div>
+  </header>
+
+  <main>
+    <div class="product-detail">
+      <h2 id="detailTitle" class="detail-title"></h2>
+      <img id="detailImage" class="detail-image" src="" alt="Product Image">
+      <p id="detailDescription" class="detail-description"></p>
+      <div class="quantity-buttons">
+        <button class="btn quantity-btn" data-quantity="3">3 Seeds</button>
+        <button class="btn quantity-btn" data-quantity="5">5 Seeds</button>
+        <button class="btn quantity-btn" data-quantity="10">10 Seeds</button>
+      </div>
+      <button id="addToCartBtn" class="btn add-to-cart-btn" style="display: none;">Add to Cart</button>
+      <button id="buyBtn" class="btn buy-btn" style="display: none;">Купить</button>
+      <p id="selectedQuantity" class="selected-quantity" style="display: none;"></p>
+      <a href="catalog.html" class="btn back-btn">Назад в каталог</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">&copy; 2025 Cannabis & Mushroom Store. All rights reserved.</p>
+    <p class="footer-text">Contact: support@cannabisstore.com</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>

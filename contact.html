@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - S&P Genetics</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- 🔝 Хедер -->
+    <header>
+        <div class="logo">
+            <a href="main.html">🌱 GreenSeeds</a>
+        </div>
+        <nav class="nav-links">
+            <a href="main.html">Главная</a>
+            <a href="catalog.html">Магазин</a>
+            <a href="spores.html">Споры грибов</a>
+            <a href="chat.html">Чат</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="aboutUs.html">О нас</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+        <div class="cart">
+            <a href="cart.html">🛒<span class="cart-count">0</span></a>
+        </div>
+        <div class="burger">
+            ☰
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Leave a Message</h2>
+        <form action="process.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your contact email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Message text..." required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <h3>Contact Info</h3>
+            <p>4293 Slovakia</p>
+            <p>+1 213 974-5898</p>
+            <p><a href="mailto:scanninggenetic@gmail.com">scanninggenetic@gmail.com</a></p>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon" data-platform="twitter"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" alt="Twitter"></a>
+                <a href="#" class="social-icon" data-platform="facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#" class="social-icon" data-platform="instagram"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg" alt="Instagram"></a>
+                <a href="#" class="social-icon" data-platform="pinterest"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/pinterest.svg" alt="Pinterest"></a>
+                <a href="#" class="social-icon" data-platform="youtube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/youtube.svg" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
