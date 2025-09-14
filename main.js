@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('div');
       card.className = 'card';
       card.innerHTML = `
-        <img src="${product.image || 'https://placehold.co/300x200?text=Image+Not+Available'}" alt="${product.name}" class="card-image" onerror="this.onerror=null; this.src='https://placehold.co/300x200?text=Error+Loading+Image';">
+        <img   src="${product.image || 'https://placehold.co/300x200?text=Image+Not+Available'}" alt="${product.name}" class="card-image"  class="card-image" width="250" height="200"">
         <h3 class="card-title">${product.name}</h3>
         <p class="card-category">Category: ${product.category === 'autoflowers' ? 'Автоцветы' : 
                                             product.category === 'feminized' ? 'Феминизированные' : 
                                             product.category === 'regulars' ? 'Регуляры' : 
                                             product.category === 'mushroom' ? 'Споры грибов' : product.category}</p>
         <p class="card-price">Price: $${product.price}</p>
-        <p class="card-description">${product.details || 'No description available'}</p>
+        
         <div class="card-buttons">
           <button class="btn cart-btn" data-name="${product.name}" data-price="${product.price}">Add to Cart</button>
           <a href="detail.html?id=${encodeURIComponent(product.name)}" class="btn details-btn">Details</a>

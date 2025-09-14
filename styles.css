@@ -93,11 +93,11 @@ main {
 }
 
 .card-image {
-  width: 100%;
-  height: 14rem;
+ max-width: 100%; /* Чтобы не превышало контейнер */
+  height: auto;    /* Сохраняет пропорции по умолчанию */
+  width: 250px;    /* Фиксированная ширина */
+  height: 200px;   /* Фиксированная высота */
   object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .card-title {
